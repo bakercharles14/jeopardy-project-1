@@ -6,29 +6,6 @@
 body {
     background-image: url(https://www.itl.cat/pngfile/big/107-1075454_super-mario-world-super-mario-background-drawing.jpg);
 }
-input {
-    height: 90px;
-    width: 100%;
-    border: black solid 1px;
-    display: flex;
-    justify-content: center;
-}
-.all-questions {
-    display: flex;
-    justify-content: center;
-
-}
-.title {
-    text-align: center;
-    border: solid black 4px;
-    width: 100%;
-}
-#question {
-    display: flex;
-    text-align: center;
-    width: 100%;
-
-}
 .logoVideo {
     padding: 10px;
 }
@@ -37,4 +14,14 @@ input {
 }
 .logoJeopardy {
     padding: 10px; 
+}
+.tenQuestions {
+    height: 80px;
+    width: 150px;
+    border: black solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: lightgreen;
 }

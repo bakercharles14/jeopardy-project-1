@@ -1,15 +1,30 @@
-// for (let i = 1; i < 6; i++) {
-//     const questions = document.createElement('div')
-//         questions.id = 'question-1-' + i
-//         questions.className = 'category-1'
-// }
-// const q1c1 = document.div.question-1-1
-// q1c1.innerHTML = '10'
-
-let question = ''
-const openQuestion = () => {
-    question = document.getElementByClassName('category-1').getElementByClassName('question-1')
-    question.addEventListener('click', () => {
-        
-    })
+//Function that creates all divs that can be clicked to answer questions
+function addTenQuestions() {
+for (let i = 0; i < 5; i++) {
+    let questions = document.createElement('div')
+        questions.classList.add('tenQuestions')
+        document.querySelector('body').appendChild(questions)
+        // questions.innerHTML = '10'
+        questions.addEventListener('click', () => {
+            
+        })
 }
+}
+addTenQuestions();
+
+// const questionBank = [
+//     {
+//         q: 'What is this class?',
+//         answers: ['SEI27', 'SEI9', 'IDK', "Brandon's boys"],
+//         correctAnswer: 'SEI27',
+//         points: 10 },
+    
+// ]
+
+// let questionButton = ''
+// const openQuestion = () => {
+//     questionButton = document.getElementByClassName('category-1').getElementByClassName('question-1')
+//     questionButton.addEventListener('click', () => {
+
+//     })
+// }
