@@ -34,8 +34,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
     font-weight: bold;
-    color: yellow;
-    outline: black solid 2px;
+    color: rgb(237, 237, 11);
+    outline: rgba(14, 216, 14, 0.5) solid 2px;
     background-color: rgb(6, 171, 260, .5);
 }
 .afterClick {

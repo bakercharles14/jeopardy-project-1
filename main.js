@@ -16,6 +16,7 @@ const questionBank = [
     },
 
 ]
+let totalScore = 0
 //Function that creates all divs that can be clicked to answer questions
 const addTenPointQuestions = () => {
     //for loop that creates the divs
@@ -25,7 +26,8 @@ const addTenPointQuestions = () => {
         document.querySelector('.jeopardyBoard').appendChild(questions)
         // questions.innerHTML = '10'
         //event listener that will create dive to have questions reside in
-        questions.addEventListener('click', () => {
+        questions.addEventListener('click', (evt) => {
+            evt.preventDefault()
             let questionsDisplay = document.createElement('div')
             document.querySelector('footer').appendChild(questionsDisplay)
             questionsDisplay.innerHTML = questionBank[i].q
@@ -37,12 +39,12 @@ const addTenPointQuestions = () => {
                 answersDisplay.addEventListener('click', () => {
                     // console.log(questionBank[i].answers[j])
                     if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
-                        console.log('You get ' + questionBank[i].points +' Points')
+                        console.log('You get ' + questionBank[i].points + ' Points')
                         let score = questionBank[i].points
-                        let totalScore = document.getElementById('score').innerHTML
-                        score += totalScore
-                        alert('Ding Ding Ding!')
-                    } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer){
+                        totalScore += score
+                        document.getElementById('score').innerHTML = totalScore
+                        console.log(totalScore)
+                    } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                         alert('Wrong answer!')
                     }
                 })
