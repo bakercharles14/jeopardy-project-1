@@ -38,3 +38,6 @@ body {
     outline: black solid 2px;
     background-color: rgb(6, 171, 260, .5);
 }
+.afterClick {
+    display: none;
+}

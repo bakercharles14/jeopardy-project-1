@@ -42,8 +42,8 @@ const addTenPointQuestions = () => {
                         let totalScore = document.getElementById('score').innerHTML
                         score += totalScore
                         alert('Ding Ding Ding!')
-                    } else {
-                        
+                    } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer){
+                        alert('Wrong answer!')
                     }
                 })
             }
