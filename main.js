@@ -31,11 +31,15 @@ const addTenPointQuestions = () => {
             let questionsDisplay = document.createElement('div')
             document.querySelector('footer').appendChild(questionsDisplay)
             questionsDisplay.innerHTML = questionBank[i].q
+            questionsDisplay.style.backgroundColor = 'blue'
+            questionsDisplay.style.color = 'white'
             //for loop to populate the answers in another div under questions
             for (let j = 0; j < questionBank[i].answers.length; j++) {
                 let answersDisplay = document.createElement('div')
                 document.querySelector('footer').appendChild(answersDisplay)
                 answersDisplay.innerHTML = questionBank[i].answers[j]
+                answersDisplay.style.backgroundColor = 'white'
+                answersDisplay.style.color = 'blue'
                 answersDisplay.addEventListener('click', () => {
                     // console.log(questionBank[i].answers[j])
                     if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
@@ -47,6 +51,7 @@ const addTenPointQuestions = () => {
                     } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                         alert('Wrong answer!')
                     }
+                    document.querySelector('.jeopardyBoard').removeEventListener('click', (addTenPointQuestions))
                 })
             }
         })
