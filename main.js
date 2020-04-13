@@ -6,7 +6,6 @@ const questionBank = [
         correctAnswer: 'Magnavox Odyssey',
         points: 10,
         category: 'Video Game History',
-        catNumber: 1
     },
     {
         q: 'Which videogame holds the record for having the highest budget ever to produce?',
@@ -36,7 +35,6 @@ const questionBank = [
         points: 100,
         category: 'Video Game History'
     },
-
     {
         q: 'What Nintendo console was the successor to the NES?',
         answers: ['Nintendo 64', 'SNES', 'Game Boy Advance', 'Game Cube'],
@@ -207,18 +205,18 @@ const addJeopardyBoard = () => {
                 let questionsDisplay = document.createElement('div')
                 document.querySelector('footer').appendChild(questionsDisplay)
                 questionsDisplay.innerHTML = questionBank[i].q
-                questionsDisplay.style.backgroundColor = 'blue'
-                questionsDisplay.style.color = 'white'
+                questionsDisplay.style.backgroundColor = 'lightcoral'
+                questionsDisplay.style.border = 'solid black 1px'
                 //for loop to populate the answers in another div under questions
                 for (let j = 0; j < questionBank[i].answers.length; j++) {
                     let answersDisplay = document.createElement('div')
                     document.querySelector('footer').appendChild(answersDisplay)
                     answersDisplay.innerHTML = questionBank[i].answers[j]
-                    answersDisplay.style.backgroundColor = 'white'
-                    answersDisplay.style.color = 'blue'
+                    answersDisplay.style.backgroundColor = 'lightgreen'
+                    answersDisplay.style.border = 'solid black 0.25px'
                     answersDisplay.addEventListener('click', () => {
                         // console.log(questionBank[i].answers[j])
-                        if (answersDisplay.disabled === undefined) {
+                        if (document.querySelector('footer').disabled === undefined) {
                             if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
                                 console.log('You get ' + questionBank[i].points + ' Points')
                                 let score = questionBank[i].points
@@ -232,10 +230,10 @@ const addJeopardyBoard = () => {
                                 // myWrongSound.play()
                                 alert('Wrong answer!')
                             }
-                            answersDisplay.disabled = true
+                            document.querySelector('footer').disabled = true
                         }
-                        if (answersDisplay.disabled = true) {
-                            answersDisplay.classList.add('questionAfterClick')
+                        if (document.querySelector('footer').disabled = true) {
+                            document.querySelector('footer').classList.add('questionAfterClick')
                         }
                     })
                     questions.disabled = true
@@ -248,8 +246,6 @@ const addJeopardyBoard = () => {
     }
 }
 addJeopardyBoard();
-// for (let i = 0; i < questionBank.length; i ++) {
-//     if (questionBank[i].catNumber = 1) {
-//         questionBank[i].classList.add('categoryOne')
-//     }
-// }
+if (questionBank.category === 'Vide Game History') {
+    
+}
