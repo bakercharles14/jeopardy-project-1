@@ -14,19 +14,41 @@ const questionBank = [
         points: 30,
         category: 'video-game-history'
     },
+    {
+        q: 'Which videogame holds the record for having the highest budget ever to produce?',
+        answers: ['The Witcher 3: Wild Hunt', 'Destiny', 'GTA V', "COD: MW2"],
+        correctAnswer: 'Destiny',
+        points: 50,
+        category: 'video-game-history'
+    },
+    {
+        q: 'What was the name of the virtual pandemic that struck the "World of Warcraft" in 2005?',
+        answers: ['Corrupted Blood', 'Covid-19', 'Laughing Death', "Morgellons"],
+        correctAnswer: 'Corrupted Blood',
+        points: 80,
+        category: 'video-game-history'
+    },
+    {
+        q: 'What is the highest level a player can reach in "Pac-Man"?',
+        answers: ['180', '256', '225', "300"],
+        correctAnswer: '256',
+        points: 100,
+        category: 'video-game-history'
+    },
 
 ]
 let totalScore = 0
 //Function that creates all divs that can be clicked to answer questions
 const addTenPointQuestions = () => {
     //for loop that creates the divs
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         let questions = document.createElement('div')
         questions.classList.add('tenQuestions')
         document.querySelector('.jeopardyBoard').appendChild(questions)
-        // questions.innerHTML = '10'
+        questions.innerHTML = questionBank[i].points
         //event listener that will create dive to have questions reside in
         questions.addEventListener('click', (evt) => {
+            questions.disabled = true;
             evt.preventDefault()
             let questionsDisplay = document.createElement('div')
             document.querySelector('footer').appendChild(questionsDisplay)
@@ -48,13 +70,18 @@ const addTenPointQuestions = () => {
                         totalScore += score
                         document.getElementById('score').innerHTML = totalScore
                         console.log(totalScore)
+                        // let myCorrectSound = document.getElementById('correct-sound')
+                        // myCorrectSound.play()
                     } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
+                        // let myWrongSound = document.getElementById('wrong-sound')
+                        // myWrongSound.play()
                         alert('Wrong answer!')
                     }
-                    document.querySelector('.jeopardyBoard').removeEventListener('click', (addTenPointQuestions))
+                    // answersDisplay.style.display = 'hidden'
                 })
             }
         })
+        document.querySelector('.jeopardyBoard').removeEventListener('click', questions)
     }
 }
 addTenPointQuestions();
