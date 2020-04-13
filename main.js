@@ -1,192 +1,192 @@
 //Bank that contains all questions
 const questionBank = [
-    //category 1: video game history
     {
-        q: 'What is the name of the final course in all "Mario Kart" videogames?',
-        answers: ['Coconut Mall', "Bowser's Castle", 'Rainbow Road', 'Moo Moo Meadows'],
-        correctAnswer: 'Rainbow Road',
+        q: 'What was the first home video game system called?',
+        answers: ['Fairchild Video Entertainment System', 'Atari Pong', 'Magnavox Odyssey', 'Coleco Telstar'],
+        correctAnswer: 'Magnavox Odyssey',
         points: 10,
         category: 'Video Game History'
     },
     {
-        q: 'The classic Atari 2600 game controller has how many buttons?',
-        answers: ['1', '3', '4', "7"],
-        correctAnswer: '1',
+        q: 'Which videogame holds the record for having the highest budget ever to produce?',
+        answers: ['The Witcher 3: Wild Hunt', 'Destiny', 'GTA V', 'COD: MW2'],
+        correctAnswer: 'Destiny',
         points: 30,
         category: 'Video Game History'
     },
     {
-        q: 'Which videogame holds the record for having the highest budget ever to produce?',
-        answers: ['The Witcher 3: Wild Hunt', 'Destiny', 'GTA V', "COD: MW2"],
-        correctAnswer: 'Destiny',
+        q: 'What is the name of the first-ever video game?',
+        answers: ['Tennis for Two', 'Pong', 'Spacewar!', 'Periscope'],
+        correctAnswer: 'Tennis for Two',
         points: 50,
         category: 'Video Game History'
     },
     {
-        q: 'What was the name of the virtual pandemic that struck the "World of Warcraft" in 2005?',
-        answers: ['Corrupted Blood', 'Covid-19', 'Laughing Death', "Morgellons"],
-        correctAnswer: 'Corrupted Blood',
+        q: 'What is the highest level a player can reach in "Pac-Man"?',
+        answers: ['180', '256', '225', '300'],
+        correctAnswer: '256',
         points: 80,
         category: 'Video Game History'
     },
     {
-        q: 'What is the highest level a player can reach in "Pac-Man"?',
-        answers: ['180', '256', '225', "300"],
-        correctAnswer: '256',
+        q: 'The classic Atari 2600 game controller has how many buttons?',
+        answers: ['3', '1', '4', '0'],
+        correctAnswer: '1',
         points: 100,
         category: 'Video Game History'
     },
-    //category 2: video game systems
+
     {
         q: 'What Nintendo console was the successor to the NES?',
-        answers: ['Nintendo 64', 'SNES', 'Game Boy Advance', "Game Cube"],
+        answers: ['Nintendo 64', 'SNES', 'Game Boy Advance', 'Game Cube'],
         correctAnswer: 'SNES',
         points: 10,
         category: 'Video Game Systems'
     },
     {
         q: 'The Nintendo Game Boy utilized which type of display system?',
-        answers: ['CRT', 'OLED', 'LED', "LCD"],
+        answers: ['CRT', 'OLED', 'LED', 'LCD'],
         correctAnswer: 'LCD',
         points: 30,
         category: 'Video Game Systems'
     },
     {
         q: 'The PlayStation was first designed as a companion to this gaming console.',
-        answers: ['SNES', 'Sony Dreamcast', 'Sega Genesis', "Game Cube"],
+        answers: ['SNES', 'Sony Dreamcast', 'Game Cube', 'Sega Genesis'],
         correctAnswer: 'SNES',
         points: 50,
         category: 'Video Game Systems'
     },
     {
         q: 'How many games were out for the PlayStation when it was first released?',
-        answers: ['30', '14', '6', "17"],
+        answers: ['30', '14', '6', '17'],
         correctAnswer: '17',
         points: 80,
         category: 'Video Game Systems'
     },
     {
         q: 'What was the first videogame console with a CD-ROM embedded into it?',
-        answers: ['Panasonic 3DO', 'SNES', 'Genesis', "PSOne"],
+        answers: ['Panasonic 3DO', 'SNES', 'Genesis', 'PSOne'],
         correctAnswer: 'Panasonic 3DO',
         points: 100,
         category: 'Video Game Systems'
     },
     //category 3: characters
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'Solid Snake is a hero in which famous videogame franchise?',
+        answers: ['Resident Evil', 'Metal Gear', 'Mass Effect', "Uncharted"],
+        correctAnswer: 'Metal Gear',
+        points: 10,
         category: 'Characters'
     },
     {
         q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
         answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
         correctAnswer: 'Liu Kang',
+        points: 30,
+        category: 'Characters'
+    },
+    {
+        q: 'Which Mario character has appeared in all but one "Mario Party" game?',
+        answers: ['Luigi', 'Yoshi', 'Pricess Peach', 'Wario'],
+        correctAnswer: 'Wario',
         points: 50,
         category: 'Characters'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'What is the name of the StarCraft character who sacrificed himself to kill the Overmind?',
+        answers: ['Artanis', 'Tassadar', 'Aldaris', 'Zeratul'],
+        correctAnswer: 'Tassadar',
+        points: 80,
         category: 'Characters'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: `What type of animal is Sonic's companion "Knuckles"?`,
+        answers: ['Platypus', 'Hedgehog', 'Echidna', "Anteater"],
+        correctAnswer: 'Echidna',
+        points: 100,
         category: 'Characters'
     },
-    {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
-        category: 'Characters'
-    },
+
     //category 4: Name of the game
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
+        q: 'What is the name of the racing series that is a spinoff of "Super Mario Brothers"?',
+        answers: ['Mario Kart', 'Mario Racing', 'Mario Party', 'Mario Cart'],
+        correctAnswer: 'Mario Kart',
+        points: 10,
+        category: 'Name of the Game'
+    },
+    {
+        q: 'Mario originated as a character in which classic video game?',
+        answers: ['Super Mario Brothers', 'Donkey Kong', 'Mario Bros', 'Mario'],
+        correctAnswer: 'Donkey Kong',
+        points: 30,
+        category: 'Name of the Game'
+    },
+    {
+        q: 'Which videogame is generally considered to be the original first-person shooter?',
+        answers: ['Wayout', 'Wolfenstein 3D', 'Maze War', 'Akalabeth: World of Doom '],
+        correctAnswer: 'Maze War',
         points: 50,
         category: 'Name of the Game'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
+        q: 'Ed Boon and John Tobias are the original designers of which renowned videogame franchise?',
+        answers: ['Minecraft', 'Resident Evil', 'Mortal Kombat', 'Street Fighter'],
         correctAnswer: 'Liu Kang',
-        points: 50,
+        points: 80,
         category: 'Name of the Game'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
-        category: 'Name of the Game'
-    },
-    {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
-        category: 'Name of the Game'
-    },
-    {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'What was the name of the last game released as a physical cartridge for the Super Nintendo?',
+        answers: ['Frogger', "Timon & Pumbaa's Jungle Games", "Metal Slader Glory: Director's Cut", 'Fire Emblem: Thracia 776'],
+        correctAnswer: 'Fire Emblem: Thracia 776',
+        points: 100,
         category: 'Name of the Game'
     },
     //category 5: fame in the game
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'What was the name of the videogame that officially featured Michael Jackson as the hero?',
+        answers: ['Beat It', 'Billie Jean', 'Thriller', 'Moonwalker'],
+        correctAnswer: 'Moonwalker',
+        points: 10,
         category: 'Fame in the Game'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'The most-popular American football videogame franchise is named after which individual?',
+        answers: ['John Madden', 'John Gruden', 'Vince Lombardi', 'Bill Walsh'],
+        correctAnswer: 'John Madden',
+        points: 30,
         category: 'Fame in the Game'
     },
     {
         q: 'Which character in the "Street Fighter" series was inspired by Bruce Lee?',
-        answers: ['Liu Kang', 'SNES', 'Fei Long', "PSOne"],
-        correctAnswer: 'Liu Kang',
+        answers: ['Ryu', 'Gouken', 'Fei Long', 'Guy'],
+        correctAnswer: 'Fei Long',
         points: 50,
         category: 'Fame in the Game'
     },
     {
-        q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
-        correctAnswer: 'Liu Kang',
-        points: 50,
+        q: 'The protagonist in "Grand Theft Auto: Vice City" was voiced by which actor?',
+        answers: ['Ray Liotta', 'Robert De Niro', 'Paul Sorvino', 'Joe Pesci'],
+        correctAnswer: 'Ray Liotta',
+        points: 80,
         category: 'Fame in the Game'
     },
     {
         q: `Which iconic actor provided the voice of the titular character during the 1990's "Sonic the Hedgehog" cartoon?`,
-        answers: ['Jaleel White', 'Tom Hanks', 'David Schwimmer', "Alfonso Ribeiro"],
+        answers: ['Jaleel White', 'Tom Hanks', 'David Schwimmer', 'Alfonso Ribeiro'],
         correctAnswer: 'Jaleel White',
         points: 100,
         category: 'Fame in the Game'
     },
 ]
 const addCategoryTitles = () => {
-    for (let k = 0; k < 5; k++) {
+    for (let i = 0; i < 5; i++) {
         let categoryTitles = document.createElement('div')
         categoryTitles.classList.add('.categoryTitles')
         document.querySelector('.categoryTitles').appendChild(categoryTitles)
-        categoryTitles.innerHTML = questionBank[k].category
+        categoryTitles.innerHTML = questionBank[i].category
     }
 }
 addCategoryTitles()
