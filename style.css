@@ -15,7 +15,7 @@ body {
 .logoJeopardy {
     padding: 10px; 
 }
-.tenQuestions {
+.questionsStyle {
     height: 80px;
     width: 150px;
     border: black solid 1px;
@@ -47,4 +47,27 @@ body {
     align-items: center;
     flex-direction: row;
     background-color: lightcoral;
+}
+.categoryTitleBoard {
+    width: 750px;
+
+}
+.boxAfterClick {
+    height: 80px;
+    width: 150px;
+    border: black solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: red;
+}
+.questionAfterClick {
+    display: none;
+}
+.categoryOne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }

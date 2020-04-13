@@ -5,7 +5,8 @@ const questionBank = [
         answers: ['Fairchild Video Entertainment System', 'Atari Pong', 'Magnavox Odyssey', 'Coleco Telstar'],
         correctAnswer: 'Magnavox Odyssey',
         points: 10,
-        category: 'Video Game History'
+        category: 'Video Game History',
+        catNumber: 1
     },
     {
         q: 'Which videogame holds the record for having the highest budget ever to produce?',
@@ -184,9 +185,9 @@ const questionBank = [
 const addCategoryTitles = () => {
     for (let i = 0; i < 5; i++) {
         let categoryTitles = document.createElement('div')
-        categoryTitles.classList.add('.categoryTitles')
-        document.querySelector('.categoryTitles').appendChild(categoryTitles)
-        categoryTitles.innerHTML = questionBank[i].category
+        categoryTitles.classList.add('categoryTitles')
+        document.querySelector('.categoryTitleBoard').appendChild(categoryTitles)
+        categoryTitles.innerHTML = questionBank[0].category
     }
 }
 addCategoryTitles()
@@ -196,43 +197,59 @@ const addJeopardyBoard = () => {
     //for loop that creates the divs
     for (let i = 0; i < 25; i++) {
         let questions = document.createElement('div')
-        questions.classList.add('tenQuestions')
+        questions.classList.add('questionsStyle')
         document.querySelector('.jeopardyBoard').appendChild(questions)
         questions.innerHTML = questionBank[i].points
         //event listener that will create dive to have questions reside in
         questions.addEventListener('click', (evt) => {
-            questions.disabled = true;
-            evt.preventDefault()
-            let questionsDisplay = document.createElement('div')
-            document.querySelector('footer').appendChild(questionsDisplay)
-            questionsDisplay.innerHTML = questionBank[i].q
-            questionsDisplay.style.backgroundColor = 'blue'
-            questionsDisplay.style.color = 'white'
-            //for loop to populate the answers in another div under questions
-            for (let j = 0; j < questionBank[i].answers.length; j++) {
-                let answersDisplay = document.createElement('div')
-                document.querySelector('footer').appendChild(answersDisplay)
-                answersDisplay.innerHTML = questionBank[i].answers[j]
-                answersDisplay.style.backgroundColor = 'white'
-                answersDisplay.style.color = 'blue'
-                answersDisplay.addEventListener('click', () => {
-                    // console.log(questionBank[i].answers[j])
-                    if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
-                        console.log('You get ' + questionBank[i].points + ' Points')
-                        let score = questionBank[i].points
-                        totalScore += score
-                        document.getElementById('score').innerHTML = totalScore
-                        console.log(totalScore)
-                        // let myCorrectSound = document.getElementById('correct-sound')
-                        // myCorrectSound.play()
-                    } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
-                        // let myWrongSound = document.getElementById('wrong-sound')
-                        // myWrongSound.play()
-                        alert('Wrong answer!')
-                    }
-                })
+            if (questions.disabled === undefined) {
+                evt.preventDefault()
+                let questionsDisplay = document.createElement('div')
+                document.querySelector('footer').appendChild(questionsDisplay)
+                questionsDisplay.innerHTML = questionBank[i].q
+                questionsDisplay.style.backgroundColor = 'blue'
+                questionsDisplay.style.color = 'white'
+                //for loop to populate the answers in another div under questions
+                for (let j = 0; j < questionBank[i].answers.length; j++) {
+                    let answersDisplay = document.createElement('div')
+                    document.querySelector('footer').appendChild(answersDisplay)
+                    answersDisplay.innerHTML = questionBank[i].answers[j]
+                    answersDisplay.style.backgroundColor = 'white'
+                    answersDisplay.style.color = 'blue'
+                    answersDisplay.addEventListener('click', () => {
+                        // console.log(questionBank[i].answers[j])
+                        if (answersDisplay.disabled === undefined) {
+                            if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
+                                console.log('You get ' + questionBank[i].points + ' Points')
+                                let score = questionBank[i].points
+                                totalScore += score
+                                document.getElementById('score').innerHTML = totalScore
+                                console.log(totalScore)
+                                // let myCorrectSound = document.getElementById('correct-sound')
+                                // myCorrectSound.play()
+                            } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
+                                // let myWrongSound = document.getElementById('wrong-sound')
+                                // myWrongSound.play()
+                                alert('Wrong answer!')
+                            }
+                            answersDisplay.disabled = true
+                        }
+                        if (answersDisplay.disabled = true) {
+                            answersDisplay.classList.add('questionAfterClick')
+                        }
+                    })
+                    questions.disabled = true
+                }
+                if (questions.disabled = true) {
+                    questions.classList.add('boxAfterClick')
+                }
             }
         })
     }
 }
 addJeopardyBoard();
+// for (let i = 0; i < questionBank.length; i ++) {
+//     if (questionBank[i].catNumber = 1) {
+//         questionBank[i].classList.add('categoryOne')
+//     }
+// }
