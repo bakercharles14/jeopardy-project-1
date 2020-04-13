@@ -1,5 +1,6 @@
 //Bank that contains all questions
 const questionBank = [
+    //category 1: video game history
     {
         q: 'What is the name of the final course in all "Mario Kart" videogames?',
         answers: ['Coconut Mall', "Bowser's Castle", 'Rainbow Road', 'Moo Moo Meadows'],
@@ -35,11 +36,47 @@ const questionBank = [
         points: 100,
         category: 'video-game-history'
     },
+    //category 2: video game systems
+    {
+        q: 'What Nintendo console was the successor to the NES?',
+        answers: ['Nintendo 64', 'SNES', 'Game Boy Advance', "Game Cube"],
+        correctAnswer: 'SNES',
+        points: 10,
+        category: 'video-game-systems'
+    },
+    {
+        q: 'The Nintendo Game Boy utilized which type of display system?',
+        answers: ['CRT', 'OLED', 'LED', "LCD"],
+        correctAnswer: 'LCD',
+        points: 30,
+        category: 'video-game-systems'
+    },
+    {
+        q: 'What was the first videogame console with a CD-ROM embedded into it?',
+        answers: ['Panasonic 3DO', 'SNES', 'Genesis', "PSOne"],
+        correctAnswer: 'Panasonic 3DO',
+        points: 100,
+        category: 'video-game-systems'
+    },
+    {
+        q: 'What was the first videogame console with a CD-ROM embedded into it?',
+        answers: ['Panasonic 3DO', 'SNES', 'Genesis', "PSOne"],
+        correctAnswer: 'Panasonic 3DO',
+        points: 100,
+        category: 'video-game-systems'
+    },
+    {
+        q: 'What was the first videogame console with a CD-ROM embedded into it?',
+        answers: ['Panasonic 3DO', 'SNES', 'Genesis', "PSOne"],
+        correctAnswer: 'Panasonic 3DO',
+        points: 100,
+        category: 'video-game-systems'
+    },
 
 ]
 let totalScore = 0
 //Function that creates all divs that can be clicked to answer questions
-const addTenPointQuestions = () => {
+const addJeopardyBoard = () => {
     //for loop that creates the divs
     for (let i = 0; i < 5; i++) {
         let questions = document.createElement('div')
@@ -77,11 +114,9 @@ const addTenPointQuestions = () => {
                         // myWrongSound.play()
                         alert('Wrong answer!')
                     }
-                    // answersDisplay.style.display = 'hidden'
                 })
             }
         })
-        document.querySelector('.jeopardyBoard').removeEventListener('click', questions)
     }
 }
-addTenPointQuestions();
+addJeopardyBoard();
