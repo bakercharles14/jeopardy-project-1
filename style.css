@@ -36,7 +36,8 @@ body {
 .jeopardyBoard {
     width: 1000px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
 }
 .categoryTitleBoard {
@@ -58,7 +59,11 @@ body {
     background-color: rgb(240, 128, 128, 1);
 }
 .questionBoard {
-    
+    width: 800px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .questionsStyle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
