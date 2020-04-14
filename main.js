@@ -242,14 +242,14 @@ const addJeopardyBoard = () => {
                     answersDisplay.addEventListener('click', () => {
                         let score = questionBank[i].points
                         if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
+                            let myCorrectSound = document.getElementById('correct-sound')
+                            myCorrectSound.play()
                             console.log('You get ' + questionBank[i].points + ' points')
                             totalScore += score
-                            // let myCorrectSound = document.getElementById('correct-sound')
-                            // myCorrectSound.play()
                             alert('Correct! You get ' + questionBank[i].points + ' points.' + ' Explanation: ' + questionBank[i].explanation)
                         } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
-                            // let myWrongSound = document.getElementById('wrong-sound')
-                            // myWrongSound.play()
+                            let myWrongSound = document.getElementById('wrong-sound')
+                            myWrongSound.play()
                             totalScore -= score
                             console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
                             alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' +  questionBank[i].explanation)
