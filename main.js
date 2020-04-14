@@ -6,7 +6,7 @@ const questionBank = [
         correctAnswer: 'Magnavox Odyssey',
         points: 10,
         category: 'Video Game History',
-        catNum: 1
+        explanation: 'The Magnavox Odyssey was released in 1972, whereas the other systems were released later.',
     },
     {
         q: 'Which videogame holds the record for having the highest budget ever to produce?',
@@ -14,7 +14,7 @@ const questionBank = [
         correctAnswer: 'Destiny',
         points: 30,
         category: 'Video Game History',
-        catNum: 1
+        explanation: 'Destiny was $500 million, The Witcher 3 cost $81 million, GTA V was $265 Million, and MW2 cost $200 million.',
     },
     {
         q: 'What is the name of the first-ever video game?',
@@ -22,7 +22,7 @@ const questionBank = [
         correctAnswer: 'Tennis for Two',
         points: 50,
         category: 'Video Game History',
-        catNum: 1
+        explanation: 'In October 1958, Physicist William Higinbotham created what is thought to be the first video game, called Tennis for Two, a similar game to the 1970 hit Pong.',
     },
     {
         q: 'What is the highest level a player can reach in "Pac-Man"?',
@@ -30,7 +30,7 @@ const questionBank = [
         correctAnswer: '256',
         points: 80,
         category: 'Video Game History',
-        catNum: 1
+        explanation: "The game becomes unplayable at the 256th level due to an integer overflow that affects the game's memory, rendering this level unbeatable",
     },
     {
         q: 'The classic Atari 2600 game controller has how many buttons?',
@@ -38,7 +38,7 @@ const questionBank = [
         correctAnswer: '1',
         points: 100,
         category: 'Video Game History',
-        catNum: 1
+        explanation: 'The Atari 2600 Joystick is a tiltable stick attached to a base with one action button. ',
     },
     {
         q: 'What Nintendo console was the successor to the NES?',
@@ -46,7 +46,7 @@ const questionBank = [
         correctAnswer: 'SNES',
         points: 10,
         category: 'Video Game Systems',
-        catNum: 2
+        explanation: '',
     },
     {
         q: 'The Nintendo Game Boy utilized which type of display system?',
@@ -54,7 +54,7 @@ const questionBank = [
         correctAnswer: 'LCD',
         points: 30,
         category: 'Video Game Systems',
-        catNum: 2
+        explanation: '',
     },
     {
         q: 'The PlayStation was first designed as a companion to this gaming console.',
@@ -62,7 +62,7 @@ const questionBank = [
         correctAnswer: 'SNES',
         points: 50,
         category: 'Video Game Systems',
-        catNum: 2
+        explanation: '',
     },
     {
         q: 'How many games were out for the PlayStation when it was first released?',
@@ -70,7 +70,7 @@ const questionBank = [
         correctAnswer: '17',
         points: 80,
         category: 'Video Game Systems',
-        catNum: 2
+        explanation: '',
     },
     {
         q: 'What was the first videogame console with a CD-ROM embedded into it?',
@@ -78,7 +78,7 @@ const questionBank = [
         correctAnswer: 'Panasonic 3DO',
         points: 100,
         category: 'Video Game Systems',
-        catNum: 2
+        explanation: '',
     },
     //category 3: characters
     {
@@ -87,15 +87,16 @@ const questionBank = [
         correctAnswer: 'Metal Gear',
         points: 10,
         category: 'Characters',
-        catNum: 3
+        explanation: '',
     },
     {
+        //UPDATE THIS QUESTION******
         q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
-        answers: ['Liu Kang', 'SNES', 'Genesis', "PSOne"],
+        answers: ['Liu Kang', 'Radon', 'Sonya', 'Scorpion'],
         correctAnswer: 'Liu Kang',
         points: 30,
         category: 'Characters',
-        catNum: 3
+        explanation: '',
     },
     {
         q: 'Which Mario character has appeared in all but one "Mario Party" game?',
@@ -103,7 +104,7 @@ const questionBank = [
         correctAnswer: 'Wario',
         points: 50,
         category: 'Characters',
-        catNum: 3
+        explanation: '',
     },
     {
         q: 'What is the name of the StarCraft character who sacrificed himself to kill the Overmind?',
@@ -111,7 +112,7 @@ const questionBank = [
         correctAnswer: 'Tassadar',
         points: 80,
         category: 'Characters',
-        catNum: 3
+        explanation: '',
     },
     {
         q: `What type of animal is Sonic's companion "Knuckles"?`,
@@ -119,7 +120,7 @@ const questionBank = [
         correctAnswer: 'Echidna',
         points: 100,
         category: 'Characters',
-        catNum: 3
+        explanation: '',
     },
 
     //category 4: Name of the game
@@ -129,7 +130,7 @@ const questionBank = [
         correctAnswer: 'Mario Kart',
         points: 10,
         category: 'Name of the Game',
-        catNum: 4
+        explanation: '',
     },
     {
         q: 'Mario originated as a character in which classic video game?',
@@ -137,7 +138,7 @@ const questionBank = [
         correctAnswer: 'Donkey Kong',
         points: 30,
         category: 'Name of the Game',
-        catNum: 4
+        explanation: '',
     },
     {
         q: 'Which videogame is generally considered to be the original first-person shooter?',
@@ -145,7 +146,7 @@ const questionBank = [
         correctAnswer: 'Maze War',
         points: 50,
         category: 'Name of the Game',
-        catNum: 4
+        explanation: '',
     },
     {
         q: 'Ed Boon and John Tobias are the original designers of which renowned videogame franchise?',
@@ -153,7 +154,7 @@ const questionBank = [
         correctAnswer: 'Liu Kang',
         points: 80,
         category: 'Name of the Game',
-        catNum: 4
+        explanation: '',
     },
     {
         q: 'What was the name of the last game released as a physical cartridge for the Super Nintendo?',
@@ -161,7 +162,7 @@ const questionBank = [
         correctAnswer: 'Fire Emblem: Thracia 776',
         points: 100,
         category: 'Name of the Game',
-        catNum: 4
+        explanation: '',
     },
     //category 5: fame in the game
 
@@ -171,7 +172,7 @@ const questionBank = [
         correctAnswer: 'John Madden',
         points: 10,
         category: 'Fame in the Game',
-        catNum: 5
+        explanation: '',
     },
     {
         q: 'Which character in the "Street Fighter" series was inspired by Bruce Lee?',
@@ -179,7 +180,7 @@ const questionBank = [
         correctAnswer: 'Fei Long',
         points: 30,
         category: 'Fame in the Game',
-        catNum: 5
+        explanation: '',
     },
     {
         q: 'What was the name of the videogame that officially featured Michael Jackson as the hero?',
@@ -187,7 +188,7 @@ const questionBank = [
         correctAnswer: 'Moonwalker',
         points: 50,
         category: 'Fame in the Game',
-        catNum: 5
+        explanation: '',
     },
     {
         q: 'The protagonist in "Grand Theft Auto: Vice City" was voiced by which actor?',
@@ -195,7 +196,7 @@ const questionBank = [
         correctAnswer: 'Ray Liotta',
         points: 80,
         category: 'Fame in the Game',
-        catNum: 5
+        explanation: '',
     },
     {
         q: `Which iconic actor provided the voice of the titular character during the 1990's "Sonic the Hedgehog" cartoon?`,
@@ -203,7 +204,7 @@ const questionBank = [
         correctAnswer: 'Jaleel White',
         points: 100,
         category: 'Fame in the Game',
-        catNum: 5
+        explanation: '',
     },
 ]
 const addCategoryTitles = () => {
@@ -245,11 +246,13 @@ const addJeopardyBoard = () => {
                             totalScore += score
                             // let myCorrectSound = document.getElementById('correct-sound')
                             // myCorrectSound.play()
+                            alert('Correct! You get ' + questionBank[i].points + ' points.' + ' Explanation: ' + questionBank[i].explanation)
                         } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                             // let myWrongSound = document.getElementById('wrong-sound')
                             // myWrongSound.play()
                             totalScore -= score
                             console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
+                            alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' +  questionBank[i].explanation)
                         }
                         console.log(totalScore)
                         document.getElementById('score').innerHTML = totalScore
@@ -258,6 +261,7 @@ const addJeopardyBoard = () => {
                         // } else if (totalScore < 0) {
                         //     document.querySelector('.score-board').style.color = 'red'
                         // }
+                        //for loop that will remove answers after it has been answered
                         let parentQuestion = document.querySelector('.whole-question')
                         let childQuestions = document.querySelector('.questionsDisplay')
                         let childAnswers = document.querySelectorAll('.answersDisplay')
@@ -265,6 +269,7 @@ const addJeopardyBoard = () => {
                         for (let k = 0; k < childAnswers.length; k++) {
                             parentQuestion.removeChild(childAnswers[k])
                         }
+                        //for loop that will run winOrLose after all questions answered
                         let allQuestions = document.querySelectorAll('.questionsStyle')
                         for (let x = 0; x < allQuestions.length; x++) {
                             if ((document.querySelectorAll('.boxAfterClick')).length === 25) {
@@ -278,14 +283,13 @@ const addJeopardyBoard = () => {
                     questions.classList.add('boxAfterClick')
                 }
             }
-            //ADD FOR LOOP HERE TO DETERMINE WIN OR LOSE
         })
     }
 }
 addJeopardyBoard();
 const winOrLose = () => {
-    if (totalScore >= 600) {
-        alert('Winner!')
-    } else if (totalScore < 600)
-        alert('Loser!')
+    if (totalScore >= 150) {
+        alert('Winner! Your total score was' + totalScore + ' points!')
+    } else if (totalScore < 150)
+        alert('You lost! Your total score was' + totalScore + ' points!')
 }

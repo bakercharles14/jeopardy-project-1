@@ -89,8 +89,14 @@ body {
 .questionsDisplay {
     background-color: lightcoral;
     border: solid black 0.25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .answersDisplay {
     background-color: lightgreen;
     border: solid black 0.25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
