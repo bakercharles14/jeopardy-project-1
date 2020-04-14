@@ -164,7 +164,7 @@ const questionBank = [
         catNum: 4
     },
     //category 5: fame in the game
-    
+
     {
         q: 'The most-popular American football videogame franchise is named after which individual?',
         answers: ['John Madden', 'John Gruden', 'Vince Lombardi', 'Bill Walsh'],
@@ -207,11 +207,11 @@ const questionBank = [
     },
 ]
 const addCategoryTitles = () => {
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < questionBank.length; i+=5) {
         let categoryTitles = document.createElement('div')
         categoryTitles.classList.add('categoryTitles')
         document.querySelector('.categoryTitleBoard').appendChild(categoryTitles)
-        document.querySelectorAll('.categoryTitles')[0].innerHTML = questionBank[0].category
+        categoryTitles.innerHTML = questionBank[i].category
     }
 }
 addCategoryTitles()
@@ -240,32 +240,32 @@ const addJeopardyBoard = () => {
                     answersDisplay.innerHTML = questionBank[i].answers[j]
                     answersDisplay.addEventListener('click', () => {
                         let score = questionBank[i].points
-                            if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
-                                console.log('You get ' + questionBank[i].points + ' points')
-                                totalScore += score
-                                // let myCorrectSound = document.getElementById('correct-sound')
-                                // myCorrectSound.play()
-                            } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
-                                // let myWrongSound = document.getElementById('wrong-sound')
-                                // myWrongSound.play()
-                                totalScore -= score
-                                console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
-                            }
-                            console.log(totalScore)
-                            document.getElementById('score').innerHTML = totalScore
-                            // if (totalScore >= 0) {
-                            //     document.getElementsByClassName('score-board').classList.add('score-board')
-                            // } else if (totalScore < 0) {
-                            //     document.querySelector('.score-board').style.color = 'red'
-                            // }
-                            let parentQuestion = document.querySelector('.whole-question')
-                            let childQuestions = document.querySelector('.questionsDisplay')
-                            let childAnswers = document.querySelectorAll('.answersDisplay')
-                            parentQuestion.removeChild(childQuestions)
-                            for (let k = 0; k < childAnswers.length; k++) {
-                                parentQuestion.removeChild(childAnswers[k])
-                            }
-                        })
+                        if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
+                            console.log('You get ' + questionBank[i].points + ' points')
+                            totalScore += score
+                            // let myCorrectSound = document.getElementById('correct-sound')
+                            // myCorrectSound.play()
+                        } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
+                            // let myWrongSound = document.getElementById('wrong-sound')
+                            // myWrongSound.play()
+                            totalScore -= score
+                            console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
+                        }
+                        console.log(totalScore)
+                        document.getElementById('score').innerHTML = totalScore
+                        // if (totalScore >= 0) {
+                        //     document.getElementsByClassName('score-board').classList.add('score-board')
+                        // } else if (totalScore < 0) {
+                        //     document.querySelector('.score-board').style.color = 'red'
+                        // }
+                        let parentQuestion = document.querySelector('.whole-question')
+                        let childQuestions = document.querySelector('.questionsDisplay')
+                        let childAnswers = document.querySelectorAll('.answersDisplay')
+                        parentQuestion.removeChild(childQuestions)
+                        for (let k = 0; k < childAnswers.length; k++) {
+                            parentQuestion.removeChild(childAnswers[k])
+                        }
+                    })
                     questions.disabled = true
                 }
                 if (questions.disabled = true) {
@@ -275,6 +275,7 @@ const addJeopardyBoard = () => {
             //ADD FOR LOOP HERE TO DETERMINE WIN OR LOSE
             let allQuestions = document.querySelectorAll('.questionsStyle')
             for (let x = 0; x < allQuestions.length; x++) {
+                console.log('Hey')
                 if ((allQuestions.classList = 'boxAfterClick').length === 25) {
                     return winOrLose()
                 }

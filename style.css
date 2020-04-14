@@ -57,6 +57,9 @@ body {
     align-items: center;
     background-color: rgb(240, 128, 128, 1);
 }
+.questionBoard {
+    
+}
 .questionsStyle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 80px;
