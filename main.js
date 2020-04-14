@@ -241,17 +241,17 @@ const addJeopardyBoard = () => {
                     answersDisplay.addEventListener('click', () => {
                         let score = questionBank[i].points
                             if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
-                                console.log('You get ' + questionBank[i].points + ' Points')
+                                console.log('You get ' + questionBank[i].points + ' points')
                                 totalScore += score
-                                console.log(totalScore)
                                 // let myCorrectSound = document.getElementById('correct-sound')
                                 // myCorrectSound.play()
                             } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                                 // let myWrongSound = document.getElementById('wrong-sound')
                                 // myWrongSound.play()
                                 totalScore -= score
-                                alert('Wrong answer!')
+                                console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
                             }
+                            console.log(totalScore)
                             document.getElementById('score').innerHTML = totalScore
                             let parentQuestion = document.querySelector('.whole-question')
                             let childQuestions = document.querySelector('.questionsDisplay')
@@ -268,11 +268,12 @@ const addJeopardyBoard = () => {
                 }
             }
             //ADD FOR LOOP HERE TO DETERMINE WIN OR LOSE
-            // for (let i = 0; i < questionBank.length; i++) {
-            //     if (questions.class === 'boxAfterClick') {
-            //         return winOrLose()
-            //     }
-            // }
+            let allQuestions = document.querySelectorAll('.questionsStyle')
+            for (let x = 0; x < allQuestions.length; x++) {
+                if ((allQuestions.classList = 'boxAfterClick').length === 25) {
+                    return winOrLose()
+                }
+            }
         })
     }
 }
