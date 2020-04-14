@@ -164,19 +164,12 @@ const questionBank = [
         catNum: 4
     },
     //category 5: fame in the game
-    {
-        q: 'What was the name of the videogame that officially featured Michael Jackson as the hero?',
-        answers: ['Beat It', 'Billie Jean', 'Thriller', 'Moonwalker'],
-        correctAnswer: 'Moonwalker',
-        points: 10,
-        category: 'Fame in the Game',
-        catNum: 5
-    },
+    
     {
         q: 'The most-popular American football videogame franchise is named after which individual?',
         answers: ['John Madden', 'John Gruden', 'Vince Lombardi', 'Bill Walsh'],
         correctAnswer: 'John Madden',
-        points: 30,
+        points: 10,
         category: 'Fame in the Game',
         catNum: 5
     },
@@ -184,6 +177,14 @@ const questionBank = [
         q: 'Which character in the "Street Fighter" series was inspired by Bruce Lee?',
         answers: ['Ryu', 'Gouken', 'Fei Long', 'Guy'],
         correctAnswer: 'Fei Long',
+        points: 30,
+        category: 'Fame in the Game',
+        catNum: 5
+    },
+    {
+        q: 'What was the name of the videogame that officially featured Michael Jackson as the hero?',
+        answers: ['Beat It', 'Billie Jean', 'Thriller', 'Moonwalker'],
+        correctAnswer: 'Moonwalker',
         points: 50,
         category: 'Fame in the Game',
         catNum: 5
@@ -206,7 +207,7 @@ const questionBank = [
     },
 ]
 const addCategoryTitles = () => {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 25; i++) {
         let categoryTitles = document.createElement('div')
         categoryTitles.classList.add('categoryTitles')
         document.querySelector('.categoryTitleBoard').appendChild(categoryTitles)
@@ -228,20 +229,21 @@ const addJeopardyBoard = () => {
             if (questions.disabled === undefined) {
                 evt.preventDefault()
                 let questionsDisplay = document.createElement('div')
-                document.querySelector('footer').appendChild(questionsDisplay)
+                document.querySelector('.whole-question').appendChild(questionsDisplay)
                 questionsDisplay.innerHTML = questionBank[i].q
-                questionsDisplay.style.backgroundColor = 'lightcoral'
+                questionsDisplay.classList.add('questionsDisplay')
                 questionsDisplay.style.border = 'solid black 1px'
                 //for loop to populate the answers in another div under questions
                 for (let j = 0; j < questionBank[i].answers.length; j++) {
                     let answersDisplay = document.createElement('div')
-                    document.querySelector('footer').appendChild(answersDisplay)
+                    document.querySelector('.whole-question').appendChild(answersDisplay)
                     answersDisplay.innerHTML = questionBank[i].answers[j]
+                    answersDisplay.classList.add('answersDisplay')
                     answersDisplay.style.backgroundColor = 'lightgreen'
                     answersDisplay.style.border = 'solid black 0.25px'
                     answersDisplay.addEventListener('click', () => {
                         // console.log(questionBank[i].answers[j])
-                        if (document.querySelector('footer').disabled === undefined) {
+                        
                             if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
                                 console.log('You get ' + questionBank[i].points + ' Points')
                                 let score = questionBank[i].points
@@ -250,31 +252,36 @@ const addJeopardyBoard = () => {
                                 console.log(totalScore)
                                 // let myCorrectSound = document.getElementById('correct-sound')
                                 // myCorrectSound.play()
+                                let allAnswers = document.querySelector('footer')
+                                allAnswers.parentNode.removeChild(allAnswers)
                             } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                                 // let myWrongSound = document.getElementById('wrong-sound')
                                 // myWrongSound.play()
                                 alert('Wrong answer!')
+                                questionBank[i].answers[j].parentNode.removeChild(questionBank[i].answers[j])
                             }
-                            document.querySelector('footer').disabled = true
-                        }
-                        if (document.querySelector('footer').disabled = true) {
-                            document.querySelector('footer').classList.add('questionAfterClick')
-                        }
-                    })
+                        })
                     questions.disabled = true
                 }
                 if (questions.disabled = true) {
                     questions.classList.add('boxAfterClick')
                 }
             }
+            //ADD FOR LOOP HERE TO DETERMINE WIN OR LOSE
+            // for (let i = 0; i < questionBank.length; i++) {
+            //     if (questions.class === 'boxAfterClick') {
+            //         return winOrLose()
+            //     }
+            // }
         })
     }
 }
 addJeopardyBoard();
-if (questionBank.category === 'Video Game History') {
-
-}
+//ADD FOR LOOP TO GO THROUGH ANSWERED QUESTIONS
 const winOrLose = () => {
-    
+    if (totalScore >= 600) {
+        alert('Winner!')
+    } else if (totalScore < 600)
+        alert('Loser!')
 }
-winOrLose ()
+// winOrLose()

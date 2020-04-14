@@ -16,14 +16,15 @@ body {
     padding: 10px; 
 }
 .questionsStyle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 80px;
-    width: 150px;
+    width: 148px;
     border: black solid 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: lightgreen;
+    background-color: rgb(144, 238, 144, .7);
 }
 .score-board {
     display: flex;
@@ -39,35 +40,38 @@ body {
     background-color: rgb(6, 171, 260, .5);
 }
 .categoryTitles {
+    font-weight: bold;
     height: 80px;
     width: 150px;
     border: black solid 1px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
-    background-color: lightcoral;
+    background-color: rgb(240, 128, 128, 1);
 }
 .categoryTitleBoard {
-    width: 100%;
+    width: 750px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
 }
 .boxAfterClick {
     height: 80px;
-    width: 150px;
+    width: 148px;
     border: black solid 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: red;
+    background-color: rgb(255, 0, 0,.7);
 }
-.questionAfterClick {
-    display: none;
-}
-.categoryOne {
+.jeopardyBoard {
+    width: 750px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+.questionsDisplay {
+    color: blue;
 }
