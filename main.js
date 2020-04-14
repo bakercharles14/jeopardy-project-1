@@ -222,43 +222,43 @@ const addJeopardyBoard = () => {
     for (let i = 0; i < 25; i++) {
         let questions = document.createElement('div')
         questions.classList.add('questionsStyle')
-        document.querySelector('.jeopardyBoard').appendChild(questions)
+        document.querySelector('.questionBoard').appendChild(questions)
         questions.innerHTML = questionBank[i].points
         //event listener that will create dive to have questions reside in
         questions.addEventListener('click', (evt) => {
             if (questions.disabled === undefined) {
                 evt.preventDefault()
                 let questionsDisplay = document.createElement('div')
+                questionsDisplay.classList.add('questionsDisplay')
                 document.querySelector('.whole-question').appendChild(questionsDisplay)
                 questionsDisplay.innerHTML = questionBank[i].q
-                questionsDisplay.classList.add('questionsDisplay')
-                questionsDisplay.style.border = 'solid black 1px'
                 //for loop to populate the answers in another div under questions
                 for (let j = 0; j < questionBank[i].answers.length; j++) {
                     let answersDisplay = document.createElement('div')
+                    answersDisplay.classList.add('answersDisplay')
                     document.querySelector('.whole-question').appendChild(answersDisplay)
                     answersDisplay.innerHTML = questionBank[i].answers[j]
-                    answersDisplay.classList.add('answersDisplay')
-                    answersDisplay.style.backgroundColor = 'lightgreen'
-                    answersDisplay.style.border = 'solid black 0.25px'
                     answersDisplay.addEventListener('click', () => {
-                        // console.log(questionBank[i].answers[j])
-                        
+                        let score = questionBank[i].points
                             if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
                                 console.log('You get ' + questionBank[i].points + ' Points')
-                                let score = questionBank[i].points
                                 totalScore += score
-                                document.getElementById('score').innerHTML = totalScore
                                 console.log(totalScore)
                                 // let myCorrectSound = document.getElementById('correct-sound')
                                 // myCorrectSound.play()
-                                let allAnswers = document.querySelector('footer')
-                                allAnswers.parentNode.removeChild(allAnswers)
                             } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                                 // let myWrongSound = document.getElementById('wrong-sound')
                                 // myWrongSound.play()
+                                totalScore -= score
                                 alert('Wrong answer!')
-                                questionBank[i].answers[j].parentNode.removeChild(questionBank[i].answers[j])
+                            }
+                            document.getElementById('score').innerHTML = totalScore
+                            let parentQuestion = document.querySelector('.whole-question')
+                            let childQuestions = document.querySelector('.questionsDisplay')
+                            let childAnswers = document.querySelectorAll('.answersDisplay')
+                            parentQuestion.removeChild(childQuestions)
+                            for (let k = 0; k < childAnswers.length; k++) {
+                                parentQuestion.removeChild(childAnswers[k])
                             }
                         })
                     questions.disabled = true

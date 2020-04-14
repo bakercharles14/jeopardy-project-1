@@ -73,10 +73,10 @@ body {
     background-color: rgb(255, 0, 0,.7);
 }
 .questionsDisplay {
-    color: blue;
-    background-color: white;
+    background-color: lightcoral;
+    border: solid black 0.25px;
 }
 .answersDisplay {
-    color: white;
-    background-color: blue;
+    background-color: lightgreen;
+    border: solid black 0.25px;
 }
