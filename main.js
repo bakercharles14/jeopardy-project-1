@@ -211,7 +211,7 @@ const addCategoryTitles = () => {
         let categoryTitles = document.createElement('div')
         categoryTitles.classList.add('categoryTitles')
         document.querySelector('.categoryTitleBoard').appendChild(categoryTitles)
-        categoryTitles.innerHTML = questionBank[i].category
+        document.querySelectorAll('.categoryTitles')[0].innerHTML = questionBank[0].category
     }
 }
 addCategoryTitles()
@@ -253,6 +253,11 @@ const addJeopardyBoard = () => {
                             }
                             console.log(totalScore)
                             document.getElementById('score').innerHTML = totalScore
+                            // if (totalScore >= 0) {
+                            //     document.getElementsByClassName('score-board').classList.add('score-board')
+                            // } else if (totalScore < 0) {
+                            //     document.querySelector('.score-board').style.color = 'red'
+                            // }
                             let parentQuestion = document.querySelector('.whole-question')
                             let childQuestions = document.querySelector('.questionsDisplay')
                             let childAnswers = document.querySelectorAll('.answersDisplay')
@@ -278,7 +283,6 @@ const addJeopardyBoard = () => {
     }
 }
 addJeopardyBoard();
-//ADD FOR LOOP TO GO THROUGH ANSWERED QUESTIONS
 const winOrLose = () => {
     if (totalScore >= 600) {
         alert('Winner!')

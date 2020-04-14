@@ -15,6 +15,11 @@ body {
 .logoJeopardy {
     padding: 10px; 
 }
+.score-board-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .score-board {
     display: flex;
     align-items: center;
@@ -32,13 +37,14 @@ body {
     width: 1000px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 .categoryTitleBoard {
     width: 150px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 .categoryTitles {
