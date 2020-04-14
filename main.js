@@ -207,7 +207,7 @@ const questionBank = [
     },
 ]
 const addCategoryTitles = () => {
-    for (let i = 0; i < questionBank.length; i+=5) {
+    for (let i = 0; i < questionBank.length; i += 5) {
         let categoryTitles = document.createElement('div')
         categoryTitles.classList.add('categoryTitles')
         document.querySelector('.categoryTitleBoard').appendChild(categoryTitles)
@@ -265,6 +265,12 @@ const addJeopardyBoard = () => {
                         for (let k = 0; k < childAnswers.length; k++) {
                             parentQuestion.removeChild(childAnswers[k])
                         }
+                        let allQuestions = document.querySelectorAll('.questionsStyle')
+                        for (let x = 0; x < allQuestions.length; x++) {
+                            if ((document.querySelectorAll('.boxAfterClick')).length === 25) {
+                                return winOrLose()
+                            }
+                        }
                     })
                     questions.disabled = true
                 }
@@ -273,13 +279,6 @@ const addJeopardyBoard = () => {
                 }
             }
             //ADD FOR LOOP HERE TO DETERMINE WIN OR LOSE
-            let allQuestions = document.querySelectorAll('.questionsStyle')
-            for (let x = 0; x < allQuestions.length; x++) {
-                console.log('Hey')
-                if ((allQuestions.classList = 'boxAfterClick').length === 25) {
-                    return winOrLose()
-                }
-            }
         })
     }
 }
@@ -290,4 +289,3 @@ const winOrLose = () => {
     } else if (totalScore < 600)
         alert('Loser!')
 }
-// winOrLose()
