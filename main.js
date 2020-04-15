@@ -304,10 +304,10 @@ const soundOff = () => {
         for (let i = 0; i < audioSources.length; i++) {
             audioSources[i].muted = true
         }
-
     })
     soundButton.addEventListener('dblclick', () => {
         document.querySelector('.sound-off-clicker').innerHTML = 'Turn sound OFF'
+        document.querySelector('.sound-off-clicker').style.fontSize = '10px'
         let audioSources = document.querySelectorAll('audio')
         for (let i = 0; i < audioSources.length; i++) {
             audioSources[i].muted = false
