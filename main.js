@@ -46,7 +46,7 @@ const questionBank = [
         correctAnswer: 'SNES',
         points: 10,
         category: 'Video Game Systems',
-        explanation: '',
+        explanation: 'The NES was released in North America in 1985, then the SNES was released 6 years later',
     },
     {
         q: 'The Nintendo Game Boy utilized which type of display system?',
@@ -54,7 +54,7 @@ const questionBank = [
         correctAnswer: 'LCD',
         points: 30,
         category: 'Video Game Systems',
-        explanation: '',
+        explanation: 'As with most handheld videogames from the classic days, the Game Boy used a liquid-crystal display (LCD).',
     },
     {
         q: 'The PlayStation was first designed as a companion to this gaming console.',
@@ -62,7 +62,7 @@ const questionBank = [
         correctAnswer: 'SNES',
         points: 50,
         category: 'Video Game Systems',
-        explanation: '',
+        explanation: 'Sony originally designed the PlayStation as a CD-ROM companion to the SNES. The new system would play both discs and standard SNES cartridges.',
     },
     {
         q: 'How many games were out for the PlayStation when it was first released?',
@@ -70,15 +70,15 @@ const questionBank = [
         correctAnswer: '17',
         points: 80,
         category: 'Video Game Systems',
-        explanation: '',
+        explanation: 'There were already 17 games to choose from when the PlayStation was released. That number would grow to well over 1000!',
     },
     {
         q: 'What was the first videogame console with a CD-ROM embedded into it?',
-        answers: ['Panasonic 3DO', 'SNES', 'Genesis', 'PSOne'],
+        answers: ['Panasonic 3DO', 'Atari Jaguar', 'Genesis', 'PSOne'],
         correctAnswer: 'Panasonic 3DO',
         points: 100,
         category: 'Video Game Systems',
-        explanation: '',
+        explanation: 'Panasonic shipped the first self-contained CD-ROM console, the 3DO. The market then became oversaturated, causing this system to fail due to its high price.',
     },
     //category 3: characters
     {
@@ -87,16 +87,15 @@ const questionBank = [
         correctAnswer: 'Metal Gear',
         points: 10,
         category: 'Characters',
-        explanation: '',
+        explanation: "Solid Snake's first appearance was in Metal Gear, released in 1987.",
     },
     {
-        //UPDATE THIS QUESTION******
         q: 'Which "Mortal Kombat" character has the ability to transform into a dragon?',
         answers: ['Liu Kang', 'Radon', 'Sonya', 'Scorpion'],
         correctAnswer: 'Liu Kang',
         points: 30,
         category: 'Characters',
-        explanation: '',
+        explanation: 'Liu Kang is able to transform himself into a Chinese dragon which includes a serpentine body with small arms.',
     },
     {
         q: 'Which Mario character has appeared in all but one "Mario Party" game?',
@@ -104,15 +103,15 @@ const questionBank = [
         correctAnswer: 'Wario',
         points: 50,
         category: 'Characters',
-        explanation: '',
+        explanation: `In the 15+ games that makeup the "Mario Party" series, only "Mario Party Advance" didn't feature Wario.`,
     },
     {
-        q: 'What is the name of the StarCraft character who sacrificed himself to kill the Overmind?',
+        q: 'What is the name of the StarCraft computer game character who sacrificed himself to kill the Overmind?',
         answers: ['Artanis', 'Tassadar', 'Aldaris', 'Zeratul'],
         correctAnswer: 'Tassadar',
         points: 80,
         category: 'Characters',
-        explanation: '',
+        explanation: 'Tassadar dies when he sacrifices himself to destroy the Overmind on Aiur in the first StarCraft game.',
     },
     {
         q: `What type of animal is Sonic's companion "Knuckles"?`,
@@ -120,7 +119,7 @@ const questionBank = [
         correctAnswer: 'Echidna',
         points: 100,
         category: 'Characters',
-        explanation: '',
+        explanation: 'Knuckles is an echidna, a type of animals that lives off of ants and termites and resides in Australia and New Guinea.',
     },
 
     //category 4: Name of the game
@@ -130,7 +129,7 @@ const questionBank = [
         correctAnswer: 'Mario Kart',
         points: 10,
         category: 'Name of the Game',
-        explanation: '',
+        explanation: `"Super Mario Kart" was originally released in 1992 and since then has become one of Nintendo's staple games, resulting in continuous sequels.`,
     },
     {
         q: 'Mario originated as a character in which classic video game?',
@@ -138,7 +137,7 @@ const questionBank = [
         correctAnswer: 'Donkey Kong',
         points: 30,
         category: 'Name of the Game',
-        explanation: '',
+        explanation: 'Though originally called by other names, Mario was the protagonist in the legendary videogame "Donkey Kong", which was released in 1981.',
     },
     {
         q: 'Which videogame is generally considered to be the original first-person shooter?',
@@ -146,7 +145,7 @@ const questionBank = [
         correctAnswer: 'Maze War',
         points: 50,
         category: 'Name of the Game',
-        explanation: '',
+        explanation: 'Maze War was developed by NASA students and it included a first-person shooter point-of-view, though it is argued Wolfenstein 3D is the true original.',
     },
     {
         q: 'Ed Boon and John Tobias are the original designers of which renowned videogame franchise?',
@@ -154,7 +153,7 @@ const questionBank = [
         correctAnswer: 'Liu Kang',
         points: 80,
         category: 'Name of the Game',
-        explanation: '',
+        explanation: 'Both Chicago born video game programmers, Boon and Tobias, are rather famous for creating the Mortal Kombat franchise.',
     },
     {
         q: 'What was the name of the last game released as a physical cartridge for the Super Nintendo?',
@@ -162,7 +161,7 @@ const questionBank = [
         correctAnswer: 'Fire Emblem: Thracia 776',
         points: 100,
         category: 'Name of the Game',
-        explanation: '',
+        explanation: 'The last game to be officially published on a physical cartridge was Fire Emblem: Thracia 776 on January 21, 2000, even though Star Fox 2 was released in 2017 in an emulated format.',
     },
     //category 5: fame in the game
 
@@ -172,7 +171,7 @@ const questionBank = [
         correctAnswer: 'John Madden',
         points: 10,
         category: 'Fame in the Game',
-        explanation: '',
+        explanation: `Until 1993, Madden NFL was called John Madden Football, recieving it's namesake from Pro Football Hall of Fame coach and commentator John Madden.`,
     },
     {
         q: 'Which character in the "Street Fighter" series was inspired by Bruce Lee?',
@@ -180,7 +179,7 @@ const questionBank = [
         correctAnswer: 'Fei Long',
         points: 30,
         category: 'Fame in the Game',
-        explanation: '',
+        explanation: 'Fei Long, one of the most-popular characters in the "Street Fighter" franchise looks, moves and sounds like Bruce Lee.',
     },
     {
         q: 'What was the name of the videogame that officially featured Michael Jackson as the hero?',
@@ -188,7 +187,7 @@ const questionBank = [
         correctAnswer: 'Moonwalker',
         points: 50,
         category: 'Fame in the Game',
-        explanation: '',
+        explanation: 'Though forgettable in its home-console form, the arcade version of Michael Jackson "Moonwalker" (1990) is a much-more entertaining experience.',
     },
     {
         q: 'The protagonist in "Grand Theft Auto: Vice City" was voiced by which actor?',
@@ -196,7 +195,7 @@ const questionBank = [
         correctAnswer: 'Ray Liotta',
         points: 80,
         category: 'Fame in the Game',
-        explanation: '',
+        explanation: 'Tommy Vercetti, voiced by Liotta, is the protagonist and playable character in the 2002 video game Grand Theft Auto: Vice City.',
     },
     {
         q: `Which iconic actor provided the voice of the titular character during the 1990's "Sonic the Hedgehog" cartoon?`,
@@ -204,7 +203,7 @@ const questionBank = [
         correctAnswer: 'Jaleel White',
         points: 100,
         category: 'Fame in the Game',
-        explanation: '',
+        explanation: 'Actor Jaleel White voiced the character in all of the DiC-produced animated series: Adventures of Sonic the Hedgehog, Sonic SatAM, and Sonic Underground as well as the Christmas special, Sonic Christmas Blast.',
     },
 ]
 const addCategoryTitles = () => {
@@ -294,7 +293,7 @@ const winOrLose = () => {
     } else if (totalScore < 150)
         alert('You lost! Your total score was ' + totalScore + ' points!')
 }
-//function that will 
+//function that will be able to make aound button turn sound on/off
 // const soundOff = () => {
 //     let soundButton = document.querySelector('.sound-off')
 //     soundButton.addEventListener('click', () => {
