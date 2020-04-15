@@ -270,7 +270,7 @@ const addJeopardyBoard = () => {
                         //for loop that will run winOrLose after all questions answered
                         let allQuestions = document.querySelectorAll('.questionsStyle')
                         for (let x = 0; x < allQuestions.length; x++) {
-                            if ((document.querySelectorAll('.boxAfterClick')).length === 25) {
+                            if ((document.querySelectorAll('.boxAfterClick')).length === questionBank.length) {
                                 return winOrLose()
                             }
                         }
