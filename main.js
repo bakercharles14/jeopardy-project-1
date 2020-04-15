@@ -206,6 +206,7 @@ const questionBank = [
         explanation: 'Actor Jaleel White voiced the character in all of the DiC-produced animated series: Adventures of Sonic the Hedgehog, Sonic SatAM, and Sonic Underground as well as the Christmas special, Sonic Christmas Blast.',
     },
 ]
+//function that will populate the category titles
 const addCategoryTitles = () => {
     for (let i = 0; i < questionBank.length; i += 5) {
         let categoryTitles = document.createElement('div')
@@ -258,11 +259,6 @@ const addJeopardyBoard = () => {
                         }
                         console.log(totalScore)
                         document.querySelector('.score-board').innerHTML = 'Total Score: ' + totalScore
-                        // if (totalScore >= 0) {
-                        //     document.getElementsByClassName('score-board').classList.add('score-board')
-                        // } else if (totalScore < 0) {
-                        //     document.querySelector('.score-board').style.color = 'red'
-                        // }
                         //for loop that will remove answers after it has been answered
                         let parentQuestion = document.querySelector('.whole-question')
                         let childQuestions = document.querySelector('.questionsDisplay')
@@ -288,6 +284,7 @@ const addJeopardyBoard = () => {
         })
     }
 }
+//function that sets win/loss standards
 addJeopardyBoard();
 const winOrLose = () => {
     if (totalScore >= 150) {
