@@ -110,12 +110,20 @@ body {
     flex-direction: row;
     background-color: rgb(255, 0, 0,.7);
 }
+.whole-question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .questionsDisplay {
     background-color: lightcoral;
     border: solid black 0.25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 8px;
 }
 .answersDisplay {
     background-color: lightgreen;
@@ -123,6 +131,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1px;
+    width: 100%;
 }
 @media (max-width: 700px) {
     .sound-off {

@@ -217,6 +217,7 @@ const addCategoryTitles = () => {
 }
 addCategoryTitles()
 let totalScore = 0
+document.querySelector('.score-board').innerHTML = 'Total Score: ' + totalScore
 //Function that creates all divs that can be clicked to answer questions
 const addJeopardyBoard = () => {
     //for loop that creates the divs
@@ -255,7 +256,7 @@ const addJeopardyBoard = () => {
                             alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' +  questionBank[i].explanation)
                         }
                         console.log(totalScore)
-                        document.getElementById('score').innerHTML = totalScore
+                        document.querySelector('.score-board').innerHTML = 'Total Score: ' + totalScore
                         // if (totalScore >= 0) {
                         //     document.getElementsByClassName('score-board').classList.add('score-board')
                         // } else if (totalScore < 0) {
@@ -289,19 +290,21 @@ const addJeopardyBoard = () => {
 addJeopardyBoard();
 const winOrLose = () => {
     if (totalScore >= 150) {
-        alert('Winner! Your total score was' + totalScore + ' points!')
+        alert('Winner! Your total score was ' + totalScore + ' points!')
     } else if (totalScore < 150)
-        alert('You lost! Your total score was' + totalScore + ' points!')
+        alert('You lost! Your total score was ' + totalScore + ' points!')
 }
-const soundOff = () => {
-    let soundButton = document.querySelector('.sound-off')
-    soundButton.addEventListener('click', () => {
-        let parentSource = document.getElementsByTagName('audio')
-        console.log(parentSource)
-        let childSource = document.querySelectorAll('.sound-source')
-        for (let i = 0; i < childSource.length; i++) {
-            parentSource.removeChild(childSource[i])
-        }
-    })
-}
-soundOff()
+//function that will 
+// const soundOff = () => {
+//     let soundButton = document.querySelector('.sound-off')
+//     soundButton.addEventListener('click', () => {
+//         document.querySelector('.sound-off-clicker').innerHTML = 'Sound Off'
+//         let parentSource = document.querySelectorAll('.sound-sources')
+//         console.log(parentSource)
+//         let childSourceOne = document.getElementById('correct-sound')
+//         let childSourceTwo = document.getElementById('wrong-sound')
+//         parentSource.removeChild(childSourceOne)
+//         parentSource.removeChild(childSourceTwo)
+//     })
+// }
+// soundOff()
