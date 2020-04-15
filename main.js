@@ -293,3 +293,15 @@ const winOrLose = () => {
     } else if (totalScore < 150)
         alert('You lost! Your total score was' + totalScore + ' points!')
 }
+const soundOff = () => {
+    let soundButton = document.querySelector('.sound-off')
+    soundButton.addEventListener('click', () => {
+        let parentSource = document.getElementsByTagName('audio')
+        console.log(parentSource)
+        let childSource = document.querySelectorAll('.sound-source')
+        for (let i = 0; i < childSource.length; i++) {
+            parentSource.removeChild(childSource[i])
+        }
+    })
+}
+soundOff()
