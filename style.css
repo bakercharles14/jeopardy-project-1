@@ -4,10 +4,14 @@
     src: url('invasion2000/INVASION2000.TTF')
 }
 * {
-    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 body {
-    background-image: url(https://www.itl.cat/pngfile/big/107-1075454_super-mario-world-super-mario-background-drawing.jpg);
+    background: url(https://www.itl.cat/pngfile/big/107-1075454_super-mario-world-super-mario-background-drawing.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .sound-off {
     display: flex;
@@ -48,7 +52,7 @@ body {
     justify-content: center;
     width: 250px;
     padding: 15px;
-    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: rgb(237, 237, 11);
@@ -90,7 +94,7 @@ body {
     flex-wrap: wrap;
 }
 .questionsStyle {
-    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     height: 80px;
     width: 147px;
     border: black solid 1px;
@@ -123,7 +127,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 5px;
 }
 .answersDisplay {
     background-color: lightgreen;
@@ -131,19 +135,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1px;
+    padding: 2px;
     width: 100%;
 }
 @media (max-width: 700px) {
-    .sound-off {
-        display: flex;
-        justify-content: flex-end;
-
+    #logo-image {
+        margin-top: 10px;
     }
     .sound-off-clicker {
-        background-color: lightcoral;
         padding: 1px 6px;
-        border: black solid 1px;
         border-radius: 3px;
         font-size: 10px;
     }
@@ -160,45 +160,23 @@ body {
         width: 24%;
     }
     .score-board {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 150px;
         padding: 10px;
-        font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 10px;
         font-weight: normal;
-        color: rgb(237, 237, 11);
-        border: rgba(14, 216, 14, 0.5) solid 2px;
-        background-color: rgb(6, 171, 260, .5);
-        border-radius: 10px;
     }
     .jeopardyBoard {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
+        padding: 5px;
     }
     .categoryTitleBoard {
         width: 75px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
     
     }
     .categoryTitles {
-        font-weight: bold;
-        font-size: 8px;
+        font-size: 10px;
         height: 40px;
         width: 75px;
-        border: black solid 1px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(240, 128, 128, 1);
     }
     .questionBoard {
         width: 390px;
@@ -207,14 +185,53 @@ body {
         flex-wrap: wrap;
     }
     .questionsStyle {
-        font-family: 'CustomFont', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         height: 40px;
         width: 75px;
-        border: black solid 1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        background-color: rgb(144, 238, 144, .7);
+    }
+}
+@media (max-width: 480px) {
+    .sound-off-clicker {
+        padding: 1px 6px;
+        font-size: 10px;
+    }
+    #logo-image {
+        margin-top: 2px;
+    }
+    .logoVideo {
+        padding: 5px;
+        width: 13%;
+    }
+    .logoGame {
+        padding: 5px;
+        width: 13%;
+    }
+    .logoJeopardy {
+        padding: 5px; 
+        width: 23%;
+    }
+    .score-board {
+        width: 85px;
+        padding: 5px;
+    }
+    .categoryTitleBoard {
+        width: 50px;
+    }
+    .categoryTitles {
+        font-size: 8px;
+        height: 35px;
+        width: 50px;
+    }
+    .questionBoard {
+        width: 260px;
+    }
+    .questionsStyle {
+        height: 35px;
+        width: 50px;
+    }
+    .questionsDisplay {
+        font-size: 9px;
+    }
+    .answersDisplay {
+        font-size: 9px;
     }
 }
