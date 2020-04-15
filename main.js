@@ -254,7 +254,7 @@ const addJeopardyBoard = () => {
                             // myWrongSound.play()
                             totalScore -= score
                             console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
-                            alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' +  questionBank[i].explanation)
+                            alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' + questionBank[i].explanation)
                         }
                         console.log(totalScore)
                         document.querySelector('.score-board').innerHTML = 'Total Score: ' + totalScore
