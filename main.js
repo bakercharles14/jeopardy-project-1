@@ -228,6 +228,8 @@ const addJeopardyBoard = () => {
         questions.innerHTML = questionBank[i].points
         //event listener that will create dive to have questions reside in
         questions.addEventListener('click', (evt) => {
+            let wholeQuestion = document.querySelector('.whole-question')
+            wholeQuestion.innerHTML = ''
             if (questions.disabled === undefined) {
                 evt.preventDefault()
                 let questionsDisplay = document.createElement('div')
@@ -244,15 +246,15 @@ const addJeopardyBoard = () => {
                         let score = questionBank[i].points
                         if (questionBank[i].answers[j] === questionBank[i].correctAnswer) {
                             //commented out until off function complete
-                            // let myCorrectSound = document.getElementById('correct-sound')
-                            // myCorrectSound.play()
+                            let myCorrectSound = document.getElementById('correct-sound')
+                            myCorrectSound.play()
                             console.log('You get ' + questionBank[i].points + ' points')
                             totalScore += score
                             alert('Correct! You get ' + questionBank[i].points + ' points.' + ' Explanation: ' + questionBank[i].explanation)
                         } else if (questionBank[i].answers[j] !== questionBank[i].correctAnswer) {
                             //commented out until off function complete
-                            // let myWrongSound = document.getElementById('wrong-sound')
-                            // myWrongSound.play()
+                            let myWrongSound = document.getElementById('wrong-sound')
+                            myWrongSound.play()
                             totalScore -= score
                             console.log('Wrong answer! You lose ' + questionBank[i].points + ' points!')
                             alert('Wrong! You lose ' + questionBank[i].points + ' points.' + ' The correct answer was ' + questionBank[i].correctAnswer + '. ' + 'Explanation: ' + questionBank[i].explanation)
@@ -292,17 +294,25 @@ const winOrLose = () => {
     } else if (totalScore < 150)
         alert('You lost! Your total score was ' + totalScore + ' points!')
 }
-//function that will be able to make aound button turn sound on/off
-// const soundOff = () => {
-//     let soundButton = document.querySelector('.sound-off')
-//     soundButton.addEventListener('click', () => {
-//         document.querySelector('.sound-off-clicker').innerHTML = 'Sound Off'
-//         let parentSource = document.querySelectorAll('.sound-sources')
-//         console.log(parentSource)
-//         let childSourceOne = document.getElementById('correct-sound')
-//         let childSourceTwo = document.getElementById('wrong-sound')
-//         parentSource.removeChild(childSourceOne)
-//         parentSource.removeChild(childSourceTwo)
-//     })
-// }
-// soundOff()
+// function that will be able to make aound button turn sound on/off
+const soundOff = () => {
+    let soundButton = document.querySelector('.sound-off')
+    soundButton.addEventListener('click', () => {
+        document.querySelector('.sound-off-clicker').innerHTML = 'Double Click to turn sound ON'
+        document.querySelector('.sound-off-clicker').style.fontSize = '7px'
+        let audioSources = document.querySelectorAll('audio')
+        for (let i = 0; i < audioSources.length; i++) {
+            audioSources[i].muted = true
+        }
+
+    })
+    soundButton.addEventListener('dblclick', () => {
+        document.querySelector('.sound-off-clicker').innerHTML = 'Turn sound OFF'
+        let audioSources = document.querySelectorAll('audio')
+        for (let i = 0; i < audioSources.length; i++) {
+            audioSources[i].muted = false
+        }
+
+    })
+}
+soundOff()
