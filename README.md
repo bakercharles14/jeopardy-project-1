@@ -1,2 +1,2 @@
 # jeopardy-project-1
-![alt text](WIREFRAME.HEIC)
+![alt text](https://i.imgur.com/nEAnkjd.jpg)
