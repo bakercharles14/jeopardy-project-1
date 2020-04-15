@@ -1,2 +1,3 @@
 # jeopardy-project-1
-![alt text](https://i.imgur.com/nEAnkjd.jpg)
+
+![alt text](https://imgur.com/LWO4sQ9)
